@@ -1,0 +1,12 @@
+Title: Project Euler - Haskell
+Author: Luke Fraenza
+Date: 2010-02-09
+
+# About #
+
+I'm going to attemp to solve as many of the [Project Euler][] problems as possible,
+using [Haskell][] in order to learn the language.
+
+[Project Euler]: http://projecteuler.net
+
+[Haskell]: http://www.haskell.org
