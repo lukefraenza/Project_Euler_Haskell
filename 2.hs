@@ -7,5 +7,7 @@ Find the sum of all the even-valued terms in the sequence which do not exceed fo
 -}
 
 
-fibs = 1 : 2 : [ a + b | (a, b) <- zip fibs (tail fibs), a+b < 4000001]
-sol2 = sum fibs
+fibs = 1 : 2 : [ a + b | (a, b) <- zip fibs (tail fibs)]
+fibs2 = [x | x<- takeWhile (<=4000000) fibs, even x]
+sol2 = sum fibs2
+--sol2 = sum [x | x<- takeWhile (<=4000000) fibs, even x]
