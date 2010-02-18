@@ -40,3 +40,17 @@ primes x = filter notMult17s (filter notMult13s (filter notMult11s (filter notMu
 primes' x = head ( primes x)
 
 myPrimes x = filter (notMults 3) (filter (notMults 2) [x-1,x-2..])
+
+
+--=================================================================
+
+primes = 2: filter ((==1) . length . primeFactors) [3,5..]
+
+primeFactors n = factor n primes
+  where
+    factor n (p:ps)
+      | p*p > n          = n
+      | n `mod` p == 0   = p : factor (n `div` p) (p:ps)
+      | otherwise        = factor n ps
+
+sol3 = last (primeFactors num)
